@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fcfcfc;
+  overflow: hidden; /* Prevents double scrollbar */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #a9a9a9;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* App container: Flexbox to align Sidebar and Main Content */
+.app-container {
+  display: flex;
+  height: 100vh; /* Full page height */
+  overflow: hidden; /* Prevent extra scroll */
+}
+
+/* Sidebar: Fixed width with independent scrolling */
+.sidebar {
+  width: 18%;
+  height: 100vh;
+  border-right: 1.5px solid #a9a9a9;
+  overflow-y: auto; /* Allows scrolling inside sidebar */
+}
+
+/* Main Content: Takes remaining space with scrolling */
+.main-content {
+  flex: 1; /* Expands to fill available space */
+  padding: 80px 20px;
+  overflow: auto; /* Allows vertical scrolling */
+  height: 100vh;
+  flex: 1;
+
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Centers content horizontally */
+  justify-content: start; /* Centers content vertically */
+  text-align: center; /* Ensures text is centered */
+}
+
+.cursor {
+  cursor: pointer;
+}
