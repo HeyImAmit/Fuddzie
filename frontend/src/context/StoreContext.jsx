@@ -7,7 +7,7 @@ const StoreContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(
     JSON.parse(localStorage.getItem("cartItems")) || {}
   );
-  const url = "http://localhost:4000";
+  const url = "https://fuddzie.onrender.com";
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [food_list, setFoodList] = useState([]);
 
