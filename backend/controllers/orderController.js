@@ -5,7 +5,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
-    const frontendUrl = "http://localhost:5173";
+    const frontendUrl = "https://fuddzie-front.onrender.com";
 
     try {
         const newOrder = new orderModel({
